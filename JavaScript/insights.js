@@ -1041,8 +1041,8 @@
     });
 
     [
-      ["Explica mais fácil", "simple"],
-      ["Me dá um exemplo", "example"],
+      ["Explique de forma mais simples", "simple"],
+      ["Dê um exemplo", "example"],
       ["Quero praticar", "practice"]
     ].forEach(([label, mode]) => {
       const btn = create(
