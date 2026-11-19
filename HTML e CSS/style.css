@@ -1644,3 +1644,35 @@ body .upproto-mission { border-color: #e1e7ec; }
 body .upproto-mission.is-complete { background: #edf8ef; border-color: #c9e8d0; }
 body .upproto-mission.is-complete > span { color: #408552; }
 body .upproto-callout { background: #eef4f9; }
+
+/* Perfil */
+.profile-intro { margin: 8px 0 24px; font-size: 15px; }
+.profile-layout { display: grid; grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.profile-summary { padding: 30px 24px; text-align: center; }
+.profile-avatar { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 16px; border-radius: 24px; background: #e6f0f8; color: #245f91; font: 800 30px Manrope, sans-serif; }
+.profile-summary h3 { margin: 0; overflow-wrap: anywhere; font-size: 20px; }
+.profile-summary > p { margin: 6px 0 24px; font-size: 14px; }
+.profile-facts { margin: 0; border-top: 1px solid #e7edf2; text-align: left; }
+.profile-facts div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; padding: 16px 0; border-bottom: 1px solid #e7edf2; }
+.profile-facts dt { color: #667b8d; font-size: 13px; }
+.profile-facts dd { margin: 0; color: #143949; font-weight: 700; }
+.profile-content { display: grid; gap: 20px; }
+.profile-card { padding: 28px; }
+.profile-card h3 { margin: 0; font-size: 19px; }
+.profile-card > p, .profile-data p { margin: 8px 0 0; font-size: 14px; }
+#profileForm { display: grid; gap: 8px; margin-top: 24px; max-width: 540px; }
+#profileForm label { display: block; margin-top: 10px; font-size: 14px; color: #304e64; }
+.profile-optional { color: #718597; font-weight: 400; }
+.profile-field-note { color: #647b8e; font-size: 13px; line-height: 1.5; }
+#profileForm input[readonly] { background: #f4f7f9; color: #536b7d; }
+#profileForm input, #profileForm select { width: 100%; min-height: 46px; font-size: 15px; }
+#profileForm .actions { margin-top: 18px; }
+.profile-data .btn { margin-top: 20px; }
+@media (max-width: 800px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .profile-summary { text-align: left; }
+  .profile-avatar { margin-left: 0; }
+}
+@media (max-width: 650px) {
+  .profile-card, .profile-summary { padding: 22px; }
+}
