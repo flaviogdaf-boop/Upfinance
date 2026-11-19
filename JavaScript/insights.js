@@ -187,8 +187,8 @@
 
     sheet.textContent = `
       .updemo-banner {
-        background: #fff8e6;
-        border: 1px solid #ead397;
+        background: rgba(81, 139, 197, 0.16);
+        border: 1px solid #dce5eb;
         padding: 16px 19px;
         border-radius: 14px;
         margin: 16px 0;
@@ -201,13 +201,13 @@
 
       .updemo-banner strong {
         display: block;
-        color: #7a5416;
+        color: #143949;
         margin-bottom: 3px;
       }
 
       .updemo-banner p {
         margin: 0;
-        color: #725c37;
+        color: #567084;
         font-size: 12px;
       }
 
@@ -480,15 +480,15 @@
         "strong",
         "",
         demoEnabled()
-          ? "🎬 MODO DEMONSTRAÇÃO ATIVO"
-          : "🎬 Apresente o UpFinance com dados fictícios"
+          ? "Modo de demonstração ativo"
+          : "Modo de demonstração"
       ),
       create(
         "p",
         "",
         demoEnabled()
           ? "Os valores exibidos são fictícios."
-          : "Veja relatórios, missões e análises preenchidos."
+          : "Explore o UpFinance com dados fictícios."
       )
     );
 
