@@ -1641,4 +1641,6 @@ body .upproto-form input { border-color: #c6d2d9; }
 body .upproto-chips button { border-color: #bfd0de; color: #102b46; }
 body .upproto-meter i { background: linear-gradient(90deg, #19426c, #518bc5); }
 body .upproto-mission { border-color: #e1e7ec; }
+body .upproto-mission.is-complete { background: #edf8ef; border-color: #c9e8d0; }
+body .upproto-mission.is-complete > span { color: #408552; }
 body .upproto-callout { background: #eef4f9; }
