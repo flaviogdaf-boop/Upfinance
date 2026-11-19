@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function defaultState() {
     return {
-      user: { name: "Estudante", track: "teens" },
+      user: { name: "Estudante", track: "teens", email: "", phone: "" },
       points: 0,
       transactions: [],
       goal: null,
@@ -497,7 +497,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if ($("age")) $("age").value = state.user.track;
+    if ($("profileEmail") && document.activeElement !== $("profileEmail")) {
+      $("profileEmail").value = sessionStorage.getItem("upfinance_email") || state.user.email || "";
+      $("profileEmail").readOnly = Boolean(sessionStorage.getItem("upfinance_email"));
+    }
+    if ($("profilePhone") && document.activeElement !== $("profilePhone")) {
+      $("profilePhone").value = state.user.phone || "";
+    }
     $("pointsTop").textContent = state.points;
+    if ($("profileDisplayName")) {
+      $("profileDisplayName").textContent = name;
+      $("profileInitial").textContent = Array.from(name.trim())[0]?.toLocaleUpperCase("pt-BR") || "E";
+      $("profileTrack").textContent = { kids: "Crianças", teens: "Jovens", adults: "Adultos" }[state.user.track] || "Adultos";
+      $("profilePoints").textContent = `${state.points} ${state.points === 1 ? "ponto" : "pontos"}`;
+    }
     if ($("points")) $("points").textContent = `${state.points} pts`;
 
     const income = state.transactions
@@ -894,6 +907,8 @@ document.addEventListener("DOMContentLoaded", () => {
     state.user.name =
       $("name").value.trim() || "Estudante";
     state.user.track = $("age").value;
+    state.user.email = $("profileEmail").value.trim();
+    state.user.phone = $("profilePhone").value.trim();
 
     toast("Perfil atualizado!");
     commit();
