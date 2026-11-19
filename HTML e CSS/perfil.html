@@ -73,36 +73,55 @@
     <section id="profile">
       <small>SUA CONTA</small>
       <h2>Meu perfil</h2>
+      <p class="profile-intro">Personalize sua experiência e acompanhe sua jornada.</p>
 
-      <article class="card">
-        <form id="profileForm">
-          <label>
-            Como podemos chamar você?
-            <input id="name" placeholder="Seu nome" maxlength="30">
-          </label>
+      <div class="profile-layout">
+        <article class="card profile-summary">
+          <div class="profile-avatar" id="profileInitial" aria-hidden="true">E</div>
+          <h3 id="profileDisplayName">Estudante</h3>
+          <p>Minha jornada financeira</p>
+          <dl class="profile-facts">
+            <div><dt>Trilha de aprendizagem</dt><dd id="profileTrack">Adultos</dd></div>
+            <div><dt>Pontos acumulados</dt><dd id="profilePoints">0 pontos</dd></div>
+          </dl>
+        </article>
 
-          <label>
-            Trilha de aprendizagem
-            <select id="age">
-              <option value="kids">Crianças</option>
-              <option value="teens">Jovens</option>
-              <option value="adults">Adultos</option>
-            </select>
-          </label>
+        <div class="profile-content">
+          <article class="card profile-card">
+            <h3>Informações do perfil</h3>
+            <p>Escolha como quer ser chamado e a trilha que combina com você.</p>
+            <form id="profileForm">
+              <label for="name">Nome</label>
+              <input id="name" placeholder="Seu nome" maxlength="30" autocomplete="nickname">
 
-          <div class="actions">
-            <button class="btn">Salvar perfil</button>
-            <button type="button" class="btn danger" id="resetData">
-              Apagar meus dados
-            </button>
-          </div>
-        </form>
+              <label for="age">Trilha de aprendizagem</label>
+              <select id="age">
+                <option value="kids">Crianças</option>
+                <option value="teens">Jovens</option>
+                <option value="adults">Adultos</option>
+              </select>
 
-        <p class="note">
-          Os dados ficam somente neste navegador.
-          Não informe dados bancários ou pessoais sensíveis.
-        </p>
-      </article>
+              <label for="profileEmail">E-mail <span class="profile-optional">(opcional)</span></label>
+              <input id="profileEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" maxlength="254">
+              <small class="profile-field-note">Quando você informa um e-mail na entrada, ele aparece aqui durante a sessão.</small>
+
+              <label for="profilePhone">Telefone <span class="profile-optional">(opcional)</span></label>
+              <input id="profilePhone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel" maxlength="30">
+
+              <div class="actions"><button class="btn" type="submit">Salvar perfil</button></div>
+            </form>
+          </article>
+
+          <article class="card profile-card profile-data">
+            <div>
+              <h3>Seus dados</h3>
+              <p>Seus dados ficam armazenados neste navegador. Não informe dados bancários ou pessoais sensíveis.</p>
+              <p>Você pode apagar seus dados, pontos e progresso quando quiser.</p>
+            </div>
+            <button type="button" class="btn danger" id="resetData">Apagar meus dados</button>
+          </article>
+        </div>
+      </div>
     </section>
 
     <footer>
