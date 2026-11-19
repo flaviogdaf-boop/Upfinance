@@ -1287,13 +1287,13 @@
       ([name, description, complete]) => {
         const line = create(
           "div",
-          "upproto-mission"
+          `upproto-mission${complete ? " is-complete" : ""}`
         );
 
         const mark = create(
           "span",
           "",
-          complete ? "✅" : "○"
+          complete ? "✓" : "○"
         );
 
         mark.style.fontSize = "21px";
