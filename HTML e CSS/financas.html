@@ -1,0 +1,212 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">⌂ Visão geral</a>
+      <a href="financas.html" class="active" aria-current="page">▤ Minhas finanças</a>
+      <a href="aprender.html">▣ Aprender</a>
+      <a href="missoes.html">⚑ Missões</a>
+      <a href="planos.html">◇ Planos</a>
+      <a href="recompensas.html">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    
+
+    <!-- FINANÇAS -->
+    <section id="money">
+      <small>ORGANIZAÇÃO</small>
+      <h2>Minhas finanças</h2>
+      <p>Registre movimentações para entender melhor seu dinheiro.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Adicionar movimentação</h3>
+          <form id="transaction">
+            <label>
+              Descrição
+              <input id="desc" required maxlength="40"
+                     placeholder="Ex.: mesada, lanche">
+            </label>
+
+            <label>
+              Valor (R$)
+              <input id="amount" type="number" min="0.01"
+                     step="0.01" required placeholder="0,00">
+            </label>
+
+            <label>
+              Data da movimentação
+              <input id="transactionDate" type="date" required>
+            </label>
+
+            <div class="row">
+              <label>
+                Tipo
+                <select id="kind">
+                  <option value="in">Receita</option>
+                  <option value="out">Despesa</option>
+                </select>
+              </label>
+
+              <label>
+                Categoria
+                <select id="category">
+                  <option>Geral</option>
+                  <option>Alimentação</option>
+                  <option>Transporte</option>
+                  <option>Lazer</option>
+                  <option>Educação</option>
+                  <option>Economia</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="btn">Registrar movimentação</button>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Histórico recente</h3>
+          <div id="history"></div>
+        </article>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Minha meta de economia</h3>
+          <form id="goal">
+            <label>
+              Nome da meta
+              <input id="goalName" maxlength="40"
+                     placeholder="Ex.: comprar um livro" required>
+            </label>
+            <label>
+              Valor desejado (R$)
+              <input id="goalValue" type="number"
+                     min="1" step="0.01" required>
+            </label>
+            <button class="btn">Salvar meta</button>
+          </form>
+          <div id="goalStatus" class="goal-status"></div>
+        </article>
+
+        <article class="card">
+          <h3>Para onde foi seu dinheiro</h3>
+          <div id="categories"></div>
+        </article>
+      </div>
+      <article class="card finance-ai" id="upfinanceAI" aria-labelledby="aiTitle">
+        <div class="finance-ai-head">
+          <div>
+            <small>✦ UPFINANCE INTELIGENTE · VERSÃO INICIAL</small>
+            <h3 id="aiTitle">Seu dinheiro, explicado sem complicação</h3>
+            <p>Entenda o que entrou, o que saiu e o que mudou no seu mês.</p>
+          </div>
+          <label class="ai-month-label">Mês analisado
+            <input id="aiMonth" type="month" aria-label="Selecione o mês para análise">
+          </label>
+        </div>
+        <p class="ai-disclaimer">Análise automática por regras e cálculos, ainda sem IA generativa. Somente os registros deste navegador são utilizados.</p>
+        <div class="ai-kpis" id="aiKPIs" aria-live="polite"></div>
+        <div class="ai-insights" id="aiInsights" aria-live="polite"></div>
+        <div class="ai-topics" role="group" aria-label="Perguntas para o assistente">
+          <button type="button" data-ai-question="resumo">O que aconteceu no mês?</button>
+          <button type="button" data-ai-question="gastos">Onde gastei mais?</button>
+          <button type="button" data-ai-question="comparacao">O que mudou?</button>
+          <button type="button" data-ai-question="proximos">O que posso melhorar?</button>
+          <button type="button" data-ai-question="meta">Como está minha meta?</button>
+        </div>
+        <div class="ai-answer" id="aiAnswer" aria-live="polite" role="status"></div>
+        <form class="ai-question-form" id="aiQuestionForm">
+          <label for="aiQuestion">Faça uma pergunta sobre suas finanças</label>
+          <div class="ai-question-row">
+            <input id="aiQuestion" maxlength="160" placeholder="Ex.: por que sobrou menos?" autocomplete="off">
+            <button class="btn" type="submit">Analisar</button>
+          </div>
+        </form>
+        <p class="ai-footnote" id="aiLegacyNotice"></p>
+        <p class="ai-footnote">Dica educativa: os resultados dependem dos registros inseridos, não representam seu saldo bancário nem recomendação de investimento.</p>
+      </article>
+    </section>
+
+    <!-- APRENDER -->
+    
+
+    
+    
+
+    <!-- PLANOS -->
+
+
+    <!-- RECOMPENSAS -->
+    
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html" class="active" aria-current="page">⌂ Visão geral</a>
+      <a href="financas.html">▤ Minhas finanças</a>
+      <a href="aprender.html">▣ Aprender</a>
+      <a href="missoes.html">⚑ Missões</a>
+      <a href="planos.html">◇ Planos</a>
+      <a href="recompensas.html">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="hero">
+        <small>SEU PROGRESSO FINANCEIRO</small>
+        <h2>
+          O FUTURO FINANCEIRO
+<br>
+          <em>COMEÇA COM UMA
+BOA ESCOLHA</em>
+        </h2>
+        <p>
+          Organize seu dinheiro, aprenda algo novo
+          e avance no seu ritmo.
+        </p>
+        <a class="btn light" href="missoes.html">
+          Continuar minha jornada →
+        </a>
+      </div>
+
+      <div class="stats">
+        <article>
+          <small>Saldo registrado</small>
+          <b id="balance">R$ 0,00</b>
+        </article>
+        <article>
+          <small>Receitas</small>
+          <b id="income" class="in">R$ 0,00</b>
+        </article>
+        <article>
+          <small>Despesas</small>
+          <b id="expense" class="out">R$ 0,00</b>
+        </article>
+        <article>
+          <small>Minha pontuação</small>
+          <b id="points">0 pts</b>
+        </article>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <small>APRENDIZADO</small>
+          <h3>Para onde vai seu dinheiro?</h3>
+          <p>
+            Aprenda a acompanhar entradas e saídas
+            e enxergar seus hábitos.
+          </p>
+          <a href="trilha.html?tipo=teens">
+            Começar aula →
+          </a>
+        </article>
+
+        <article class="card">
+          <small>DESAFIO DA VEZ</small>
+          <h3>Uma missão espera por você</h3>
+          <div class="bar" id="progressWrap"
+               role="progressbar"
+               aria-valuemin="0"
+               aria-valuemax="3">
+            <i id="progress"></i>
+          </div>
+          <p id="progressText">
+            0 de 3 missões concluídas
+          </p>
+          <a href="missoes.html">Ver minhas missões →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINANÇAS -->
+    
+
+    <!-- APRENDER -->
+    
+
+    
+    
+
+    <!-- PLANOS -->
+
+
+    <!-- RECOMPENSAS -->
+    
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

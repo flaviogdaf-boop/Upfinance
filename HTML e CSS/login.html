@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Entrar • UpFinance</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body.auth-body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        radial-gradient(
+          circle at 12% 10%,
+          #c7f2e0,
+          transparent 36%
+        ),
+        radial-gradient(
+          circle at 90% 85%,
+          #d5e9f1,
+          transparent 35%
+        ),
+        #f4f8f7;
+    }
+
+    body.auth-body > main.auth-card {
+      width: min(100%, 460px);
+      max-width: 460px;
+
+      margin: 0;
+      padding: clamp(28px, 6vw, 48px);
+
+      background: #fff;
+      border: 1px solid #fff;
+      border-radius: 24px;
+
+      box-shadow:
+        0 24px 70px #102b461c;
+    }
+
+    .auth-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 36px;
+
+      color: #102b46;
+      font: 800 23px Manrope, sans-serif;
+      text-decoration: none;
+    }
+
+    .auth-logo .logo-mark {
+      background: #d7f6e9;
+      color: #135c4a;
+    }
+
+    .auth-card .eyebrow {
+      color: #168366;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+    }
+
+    .auth-card h1 {
+      margin: 8px 0;
+      font-size: 30px;
+    }
+
+    .auth-card p {
+      color: #6b7a8c;
+    }
+
+    .auth-card form {
+      display: grid;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .auth-card label {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    .auth-card input {
+      width: 100%;
+      padding: 13px;
+
+      border: 1px solid #dce7e4;
+      border-radius: 10px;
+
+      font: inherit;
+    }
+
+    .auth-card .btn {
+      width: 100%;
+      padding: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #17664e,
+          #249b77
+        );
+    }
+
+    .auth-card small {
+      color: #6b7a8c;
+    }
+  </style>
+</head>
+
+<body class="auth-body">
+  <main class="auth-card">
+
+    <a class="auth-logo" href="login.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <p class="eyebrow">
+      SEU FUTURO COMEÇA AQUI
+    </p>
+
+    <h1>Boas-vindas ao UpFinance</h1>
+
+    <p>
+      Organize seu dinheiro e aprenda no seu ritmo.
+    </p>
+
+    <form id="entrada">
+      <label>
+        E-mail
+
+        <input
+          id="email"
+          type="email"
+          required
+          pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+          placeholder="voce@email.com"
+        >
+      </label>
+
+      <label>
+        Senha
+
+        <input
+          id="senha"
+          type="password"
+          required
+          minlength="6"
+          placeholder="Pelo menos 6 caracteres"
+        >
+      </label>
+
+      <button class="btn" type="submit">
+        Entrar no UpFinance →
+      </button>
+    </form>
+
+    <p>
+      <small>
+        Entrada demonstrativa para o projeto integrador.
+      </small>
+    </p>
+
+    <p style="margin-top: 16px;">
+      Não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+    </p>
+
+  </main>
+
+  <script>
+    document
+      .getElementById("entrada")
+      .addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        sessionStorage.setItem(
+          "upfinance_entrada",
+          "sim"
+        );
+
+        location.href = "index.html";
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">⌂ Visão geral</a>
+      <a href="financas.html">▤ Minhas finanças</a>
+      <a href="aprender.html">▣ Aprender</a>
+      <a href="missoes.html" class="active" aria-current="page">⚑ Missões</a>
+      <a href="planos.html">◇ Planos</a>
+      <a href="recompensas.html">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    
+
+    <!-- FINANÇAS -->
+    
+
+    <!-- APRENDER -->
+    
+
+    
+    <section id="missions">
+      <small>APRENDER FAZENDO</small>
+      <h2>Missões práticas</h2>
+      <p>Complete desafios educativos e acumule pontos.</p>
+
+      <div class="mission" data-mission-card="register">
+        <div>
+          <small>MISSÃO 01 • 30 PONTOS</small>
+          <h3>Detetive dos gastos</h3>
+          <p>Registre pelo menos uma receita e uma despesa.</p>
+        </div>
+        <button data-mission="register" class="btn secondary">
+          Ver tarefa
+        </button>
+      </div>
+
+      <div class="mission" data-mission-card="goal">
+        <div>
+          <small>MISSÃO 02 • 30 PONTOS</small>
+          <h3>Um objetivo para chamar de seu</h3>
+          <p>Crie uma meta de economia.</p>
+        </div>
+        <button data-mission="goal" class="btn secondary">
+          Ver tarefa
+        </button>
+      </div>
+
+      <div class="mission" data-mission-card="invest">
+        <div>
+          <small>MISSÃO 03 • 40 PONTOS</small>
+          <h3>Primeiro passo nos investimentos</h3>
+          <p>Leia uma aula e experimente a simulação educativa.</p>
+        </div>
+        <button data-mission="invest" class="btn secondary">
+          Ver tarefa
+        </button>
+      </div>
+
+      
+      <article class="card quiz" id="quizCard">
+        <small>QUIZ RELÂMPAGO • ATÉ 10 PONTOS POR RODADA</small>
+        <h3>Teste seus conhecimentos</h3>
+
+        <p>
+          Responda a 5 perguntas por rodada. São 30 questões
+          diferentes, sem repetição até terminar todas.
+        </p>
+
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 8px">
+          <strong id="quizCounter">Pergunta 1 de 30</strong>
+          <span id="quizRound">Rodada 1 de 6</span>
+        </div>
+
+        <div class="bar" role="progressbar"
+             aria-label="Progresso do quiz"
+             aria-valuemin="0" aria-valuemax="30"
+             aria-valuenow="0" id="quizProgress">
+          <i id="quizProgressBar"></i>
+        </div>
+
+        <h3 id="quizQuestion" style="margin-top:24px"></h3>
+
+        <div id="quiz"></div>
+
+        <p id="quizMsg" aria-live="polite"></p>
+
+        <div class="actions" style="margin-top:18px">
+          <button type="button" class="btn" id="quizNext" disabled>
+            Próxima pergunta →
+          </button>
+        </div>
+
+        <p class="note" id="quizNote">
+          Cada rodada concluída vale 10 pontos uma única vez.
+          Repetir as perguntas não gera pontos extras.
+        </p>
+      </article>
+    </section>
+
+    <!-- PLANOS -->
+
+
+    <!-- RECOMPENSAS -->
+    
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

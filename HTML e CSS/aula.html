@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aula • UpFinance</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cursos.css">
+</head>
+<body class="course-body">
+  <div class="course-shell">
+    <nav class="course-nav">
+      <a class="brand" href="index.html">⬡ upfinance</a>
+      <a id="backTrack" href="trilha.html?tipo=teens">
+        ← Voltar às aulas
+      </a>
+    </nav>
+
+    <main class="reading-layout">
+      <article class="reading-card">
+        <small id="lessonMeta"></small>
+        <h1 id="lessonTitle"></h1>
+        <p class="reading-lead" id="lessonDesc"></p>
+
+        <div id="lessonContent"></div>
+
+        <div class="finish-row">
+          <button id="finishLesson" class="btn">
+            Concluir aula • +10 pontos
+          </button>
+          <a id="nextLesson" class="btn secondary">
+            Próxima aula →
+          </a>
+        </div>
+      </article>
+
+      <aside class="reading-aside">
+        <h3>Videoaula</h3>
+        <div id="lessonVideo"></div>
+
+        <hr>
+
+        <h3>Seu progresso</h3>
+        <p id="readingProgress"></p>
+
+        <p>
+          O conteúdo é educativo, não é indicação de investimento.
+        </p>
+      </aside>
+    </main>
+
+    <footer>UpFinance • Educação financeira</footer>
+  </div>
+
+  <script src="../JavaScript/conteudos.js"></script>
+<script src="../JavaScript/videos.js"></script>
+<script src="../JavaScript/cursos.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">⌂ Visão geral</a>
+      <a href="financas.html">▤ Minhas finanças</a>
+      <a href="aprender.html">▣ Aprender</a>
+      <a href="missoes.html">⚑ Missões</a>
+      <a href="planos.html" class="active" aria-current="page">◇ Planos</a>
+      <a href="recompensas.html">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    
+
+    <!-- FINANÇAS -->
+    
+
+    <!-- APRENDER -->
+    
+
+    
+    
+
+    <!-- PLANOS -->
+<section id="plans" class="plans">
+
+  <div class="plans-heading">
+    <small>ESCOLHA COMO EVOLUIR</small>
+
+    <h2>Um plano para cada momento</h2>
+
+    <p>
+      Conheça as opções pensadas para acompanhar
+      sua jornada financeira.
+    </p>
+  </div>
+
+  <div class="plans-grid">
+
+    <!-- GRÁTIS -->
+    <article class="plan-card">
+      <div class="plan-icon" aria-hidden="true">✦</div>
+
+      <h3>Grátis</h3>
+
+      <p class="plan-description">
+        Um começo simples para organizar suas finanças.
+      </p>
+
+      <p class="plan-price">
+        <span>R$</span> 0<span>,00</span>
+      </p>
+
+      <p class="plan-caption">
+        Para começar sua jornada
+      </p>
+
+      <ul>
+        <li>Organização financeira</li>
+        <li>Conteúdos educativos</li>
+        <li>Missões e recompensas</li>
+      </ul>
+
+      <button
+        type="button"
+        class="plan-button plan-button-outline"
+        data-plan="Grátis"
+      >
+        Selecionar Grátis
+      </button>
+    </article>
+
+    <!-- PLUS -->
+    <article class="plan-card plan-featured">
+      <span class="plan-badge">MAIS POPULAR</span>
+
+      <div class="plan-icon" aria-hidden="true">✧</div>
+
+      <h3>Plus</h3>
+
+      <p class="plan-description">
+        Para quem quer dar o próximo passo.
+      </p>
+
+      <p class="plan-price">
+        <span>R$</span> 29<span>,90</span>
+      </p>
+
+      <p class="plan-caption">
+        Mais para sua jornada
+      </p>
+
+      <ul>
+        <li>Recursos do plano Grátis</li>
+        <li>Mais opções para aprender</li>
+        <li>Benefícios exclusivos</li>
+      </ul>
+
+      <button
+        type="button"
+        class="plan-button plan-button-primary"
+        data-plan="Plus"
+      >
+        Selecionar Plus
+      </button>
+    </article>
+
+    <!-- PRO -->
+    <article class="plan-card plan-pro">
+      <div class="plan-icon" aria-hidden="true">◆</div>
+
+      <h3>Pro</h3>
+
+      <p class="plan-description">
+        Uma experiência completa para ir mais longe.
+      </p>
+
+      <p class="plan-price">
+        <span>R$</span> 59<span>,99</span>
+      </p>
+
+      <p class="plan-caption">
+        Seu próximo nível
+      </p>
+
+      <ul>
+        <li>Recursos do plano Plus</li>
+        <li>Experiência avançada</li>
+        <li>Benefícios exclusivos Pro</li>
+      </ul>
+
+      <button
+        type="button"
+        class="plan-button plan-button-outline"
+        data-plan="Pro"
+      >
+        Selecionar Pro
+      </button>
+    </article>
+
+  </div>
+
+  <p
+    class="plans-note"
+    id="plansMessage"
+    role="status"
+    aria-live="polite"
+  >
+    Planos ilustrativos para o protótipo.
+    Nenhuma cobrança será realizada.
+  </p>
+
+</section>
+
+    <!-- RECOMPENSAS -->
+    
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

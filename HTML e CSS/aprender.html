@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">⌂ Visão geral</a>
+      <a href="financas.html">▤ Minhas finanças</a>
+      <a href="aprender.html" class="active" aria-current="page">▣ Aprender</a>
+      <a href="missoes.html">⚑ Missões</a>
+      <a href="planos.html">◇ Planos</a>
+      <a href="recompensas.html">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    
+
+    <!-- FINANÇAS -->
+    
+
+    <!-- APRENDER -->
+    <section id="learn">
+      <small>EDUCAÇÃO FINANCEIRA</small>
+      <h2>Aprenda no seu ritmo</h2>
+      <p>
+        Escolha a trilha de aprendizagem mais adequada
+        para você e desenvolva seus conhecimentos financeiros.
+      </p>
+
+      <div class="track-cards">
+        <a class="track-card kids" href="trilha.html?tipo=kids">
+          <small>EDUCAÇÃO INFANTIL</small>
+          <h3>Crianças</h3>
+          <p>
+            Os primeiros passos na educação financeira,
+            com conteúdos simples, atividades e videoaulas.
+          </p>
+          <strong>Acessar trilha →</strong>
+        </a>
+
+        <a class="track-card teens" href="trilha.html?tipo=teens">
+          <small>EDUCAÇÃO PARA JOVENS</small>
+          <h3>Jovens</h3>
+          <p>
+            Aprenda sobre organização financeira,
+            planejamento, economia e investimentos.
+          </p>
+          <strong>Acessar trilha →</strong>
+        </a>
+
+        <a class="track-card adults" href="trilha.html?tipo=adults">
+          <small>EDUCAÇÃO PARA ADULTOS</small>
+          <h3>Adultos</h3>
+          <p>
+            Aprofunde seus conhecimentos sobre investimentos,
+            patrimônio e gestão financeira.
+          </p>
+          <strong>Acessar trilha →</strong>
+        </a>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <small>EXPERIÊNCIA PRÁTICA</small>
+          <h3>Seu primeiro investimento — em uma simulação</h3>
+          <p>
+            Aprenda sobre prazo e juros sem usar dinheiro real.
+            Esta atividade é educativa.
+          </p>
+
+          <form id="simForm">
+            <label>
+              Valor inicial (R$)
+              <input id="initial" type="number" value="100"
+                     min="1" step="0.01" required>
+            </label>
+            <label>
+              Aporte mensal (R$)
+              <input id="monthly" type="number" value="0"
+                     min="0" step="0.01">
+            </label>
+
+            <div class="row">
+              <label>
+                Taxa hipotética ao mês (%)
+                <input id="rate" type="number" value="1"
+                       min="0" max="10" step="0.1" required>
+              </label>
+              <label>
+                Período (meses)
+                <input id="months" type="number" value="12"
+                       min="1" max="120" required>
+              </label>
+            </div>
+
+            <button class="btn">Simular</button>
+          </form>
+        </article>
+
+        <article class="card result" aria-live="polite">
+          <small>RESULTADO HIPOTÉTICO</small>
+          <b id="result">R$ 112,68</b>
+          <div class="result-split">
+            <span>
+              Você investiu<br>
+              <strong id="invested">R$ 100,00</strong>
+            </span>
+            <span>
+              Juros<br>
+              <strong id="interest">R$ 12,68</strong>
+            </span>
+          </div>
+          <p id="explain">
+            Simulação de juros compostos,
+            não uma promessa de rendimento.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    
+    
+
+    <!-- PLANOS -->
+
+
+    <!-- RECOMPENSAS -->
+    
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

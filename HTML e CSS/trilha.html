@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trilhas • UpFinance</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cursos.css">
+</head>
+<body class="course-body">
+  <div class="course-shell">
+    <nav class="course-nav">
+      <a class="brand" href="index.html">⬡ upfinance</a>
+      <a href="aprender.html">← Voltar ao painel</a>
+    </nav>
+
+    <header class="course-hero">
+      <small>APRENDER NO SEU TEMPO</small>
+      <h1 id="trackTitle"></h1>
+      <p id="trackDesc"></p>
+      <div class="track-switch">
+        <a href="trilha.html?tipo=kids"> Crianças</a>
+        <a href="trilha.html?tipo=teens"> Jovens</a>
+        <a href="trilha.html?tipo=adults"> Adultos</a>
+      </div>
+    </header>
+
+    <section class="course-section">
+      <div class="section-heading">
+        <div>
+          <small>UM ASSUNTO POR VEZ</small>
+          <h2>Escolha sua próxima aula</h2>
+        </div>
+        <span id="courseCount"></span>
+      </div>
+      <div id="courseList" class="course-list"></div>
+    </section>
+
+    <section class="course-section">
+      <h2>Para aprender assistindo</h2>
+      
+      <div id="videos" class="video-grid"></div>
+    </section>
+
+    <footer>
+      UpFinance • Educação financeira • Conteúdo educativo
+    </footer>
+  </div>
+
+  <script src="../JavaScript/conteudos.js"></script>
+<script src="../JavaScript/videos.js"></script>
+<script src="../JavaScript/cursos.js"></script>
+</body>
+</html>

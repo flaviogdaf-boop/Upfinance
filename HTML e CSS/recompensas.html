@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UpFinance — Educação financeira para crianças, jovens e adultos.">
+  <title>UpFinance • Educação Financeira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+
+  <aside>
+    <a class="logo" href="index.html">
+      <span class="logo-mark">U</span>
+      upfinance
+    </a>
+
+    <div class="user">
+      Olá, <strong id="sideName">Estudante</strong>
+      <small>Minha jornada financeira</small>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html">⌂ Visão geral</a>
+      <a href="financas.html">▤ Minhas finanças</a>
+      <a href="aprender.html">▣ Aprender</a>
+      <a href="missoes.html">⚑ Missões</a>
+      <a href="planos.html">◇ Planos</a>
+      <a href="recompensas.html" class="active" aria-current="page">✦ Recompensas</a>
+      <a href="perfil.html">◎ Meu perfil</a>
+    </nav>
+
+    <p class="tip">
+      <strong>✦ DICA DO DIA</strong>
+      <small id="tipText">
+        Antes de comprar, pergunte: isso é necessidade ou vontade?
+      </small>
+    </p>
+  </aside>
+
+  <main id="main">
+    <header>
+      <div>
+        <small>SUA JORNADA COMEÇA AQUI</small>
+        <h1 id="hello">Olá!</h1>
+      </div>
+      <div class="points" aria-live="polite">
+        ✦ <b id="pointsTop">0</b> pontos
+      </div>
+    </header>
+
+    
+
+    <!-- FINANÇAS -->
+    
+
+    <!-- APRENDER -->
+    
+
+    
+    
+
+    <!-- PLANOS -->
+
+
+    <!-- RECOMPENSAS -->
+    <section id="rewards">
+      <small>SUAS CONQUISTAS</small>
+      <h2>Recompensas</h2>
+      <p>Seus pontos representam atividades educativas concluídas.</p>
+
+      <div class="grid">
+        <article class="card reward">
+          <small>PLANO PLUS</small>
+          <h3>5% de desconto</h3>
+          <p>Benefício demonstrativo para um plano superior.</p>
+          <b>100 pontos</b>
+          <button class="btn redeem"
+                  data-id="plus" data-cost="100"
+                  data-name="5% no plano Plus">
+            Resgatar
+          </button>
+        </article>
+
+        <article class="card reward">
+          <small>PLANO PRO</small>
+          <h3>10% de desconto</h3>
+          <p>Benefício demonstrativo para um plano superior.</p>
+          <b>200 pontos</b>
+          <button class="btn redeem"
+                  data-id="premium" data-cost="200"
+                  data-name="10% no plano Premium">
+            Resgatar
+          </button>
+        </article>
+      </div>
+
+      <p class="note">
+        Planos, descontos e resgates são ilustrativos;
+        não há cobrança ou oferta comercial ativa neste protótipo.
+      </p>
+    </section>
+
+    <!-- PERFIL -->
+    
+
+    <footer>
+      © 2026 UpFinance • Protótipo acadêmico de educação financeira.
+    </footer>
+  </main>
+
+  <div id="toast" aria-live="polite"></div>
+  <script src="../JavaScript/script.js"></script>
+<script src="../JavaScript/insights.js"></script>
+
+  <script>
+  document
+    .querySelectorAll("[data-plan]")
+    .forEach(function (button) {
+      button.addEventListener("click", function () {
+        document.getElementById("plansMessage").textContent =
+          "Plano " +
+          button.dataset.plan +
+          " selecionado para demonstração. " +
+          "Nenhuma cobrança será realizada.";
+      });
+    });
+</script>
+</body>
+</html>

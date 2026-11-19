@@ -1,0 +1,503 @@
+/* UpFinance — tema azul */
+
+body.course-body {
+  background: #f4f7fb;
+  color: #203247;
+  font-size: 16px;
+}
+
+.course-shell {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.course-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  gap: 12px;
+}
+
+.course-nav a {
+  text-decoration: none;
+  color: #244965;
+  font-weight: 800;
+}
+
+.course-nav .brand {
+  font-size: 23px;
+  color: #102b46;
+}
+
+.course-hero {
+  background: linear-gradient(120deg, #102b46, #25637d);
+  padding: 65px 55px;
+  border-radius: 24px;
+  color: white;
+  display: block;
+  margin: 12px 0 45px;
+}
+
+.course-hero small {
+  color: #99bee4;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.course-hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  color: white;
+  margin: 12px 0;
+}
+
+.course-hero p {
+  color: #dce9f0;
+  font-size: 18px;
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.track-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.track-switch a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid #ffffff66;
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-weight: 700;
+}
+
+.track-switch a.current {
+  background: white;
+  color: #102b46;
+}
+
+.course-section {
+  margin: 35px 0 55px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-heading span {
+  color: #6b7a8c;
+}
+
+.course-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.course-tile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  border: 1px solid #e2eaf1;
+  border-radius: 16px;
+  padding: 25px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 7px 20px #14304b0b;
+  transition: transform .2s, border-color .2s;
+}
+
+.course-tile:hover {
+  border-color: #3678b7;
+  transform: translateY(-2px);
+}
+
+.course-number {
+  font-size: 27px;
+  font-weight: 800;
+  color: #19426c;
+  background: #e9f0f7;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.course-tile h3 {
+  font-size: 21px;
+}
+
+.course-tile p {
+  font-size: 15px;
+  color: #6b7a8c;
+}
+
+.course-tile small {
+  font-weight: 800;
+  color: #19426c;
+}
+
+.course-arrow {
+  margin-left: auto;
+  font-size: 25px;
+  color: #3678b7;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.video-card,
+.reading-card,
+.reading-aside {
+  background: white;
+  border: 1px solid #e2eaf1;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.video-card h3 {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.video-card iframe,
+.video-card video,
+.reading-aside iframe,
+.reading-aside video,
+.lesson-inline-video iframe,
+.lesson-inline-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+  background: #102b46;
+  display: block;
+}
+
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background: #e9f0f6;
+  border: 2px dashed #bdcdda;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #49677f;
+}
+
+.video-placeholder span {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.video-placeholder p {
+  font-size: 14px;
+}
+
+.expand-video-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 12px;
+  border: 1px solid #d9e4ec;
+  border-radius: 9px;
+  background: #f4f7fa;
+  color: #183b56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s,
+    border-color .2s;
+}
+
+.expand-video-btn:hover {
+  background: #e8f0f7;
+  border-color: #b9cddd;
+}
+
+.expand-video-btn:focus-visible {
+  outline: 3px solid #8cc4ec;
+  outline-offset: 2px;
+}
+
+.expand-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.reading-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  align-items: start;
+  gap: 22px;
+  margin: 28px 0 60px;
+}
+
+.reading-layout.reading-layout-full {
+  grid-template-columns: 1fr;
+}
+
+.reading-aside[hidden] {
+  display: none;
+}
+
+.course-body .reading-layout {
+  max-width: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.reading-card {
+  padding: clamp(25px, 5vw, 55px);
+}
+
+.reading-card > small {
+  color: #19426c;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.reading-card h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.reading-lead {
+  font-size: 19px;
+  color: #6b7a8c;
+  line-height: 1.7;
+}
+
+.reading-section {
+  padding: 22px 0;
+  border-top: 1px solid #e8edf2;
+  margin: 25px 0;
+}
+
+.reading-section h2 {
+  font-size: 23px;
+}
+
+.reading-section p {
+  font-size: 17px;
+  line-height: 1.95;
+  color: #405269;
+}
+
+.reading-aside {
+  position: sticky;
+  top: 20px;
+}
+
+.reading-aside p {
+  line-height: 1.7;
+  color: #6b7a8c;
+}
+
+.finish-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.finish-row a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #102b46;
+}
+
+body.video-modal-open {
+  overflow: hidden;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(7, 20, 35, .83);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: videoFadeIn .2s ease;
+}
+
+.video-modal-container {
+  width: min(1200px, 94vw);
+  max-height: 94vh;
+  background: #101e2c;
+  border: 1px solid #ffffff24;
+  border-radius: 17px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 80px #0008;
+  animation: videoZoomIn .25s ease;
+}
+
+.video-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 22px;
+  background: #152c41;
+  border-bottom: 1px solid #ffffff18;
+}
+
+.video-modal-header h2 {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.video-modal-close {
+  border: 1px solid #ffffff36;
+  background: #ffffff12;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.video-modal-close:hover {
+  background: #ffffff2a;
+}
+
+.video-modal-close:focus-visible {
+  outline: 3px solid #8cc4ec;
+}
+
+.video-modal-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+.video-modal-player video,
+.video-modal-player iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(94vh - 75px);
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border: none;
+  background: black;
+}
+
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes videoZoomIn {
+  from {
+    transform: scale(.96);
+    opacity: .6;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.course-shell footer {
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .reading-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reading-aside {
+    position: static;
+  }
+
+  .course-hero {
+    padding: 35px 25px;
+  }
+
+  .course-tile {
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .course-number {
+    font-size: 20px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .course-shell {
+    padding: 0 15px;
+  }
+
+  .video-modal {
+    padding: 12px;
+  }
+
+  .video-modal-container {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 12px;
+  }
+
+  .video-modal-header {
+    padding: 12px 15px;
+  }
+
+  .video-modal-header h2 {
+    font-size: 14px;
+  }
+
+  .video-modal-close {
+    font-size: 12px;
+    padding: 9px 13px;
+  }
+
+  .video-modal-player video,
+    .video-modal-player iframe {
+    max-height: calc(94vh - 65px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-modal,
+    .video-modal-container {
+    animation: none;
+  }
+}
